@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+	<html lang = "en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Rental Form</title>
+	</head>
+	
+	<body>
+	<h1>Chris' Apartment Search Form</h1>
+
+		<form action = "POST">
+			<fieldset>
+			<legend>Renter(s) information</legend>
+				How many people will live in the apartment?
+				<input type = "number" name="howManyPeople" id="howManyPeople" min="0" max="5"/>
+
+				<br><br>
+
+				<label>Smoker? &nbsp;</label>
+				<input type="radio" name="isSmoker" value="yes" />Yes
+				<input type="radio" name="isSmoker" value="no" />No
+				
+				<br><br>
+
+				<label>Any pets? </label> 
+				<br>
+
+				<input type="checkbox" name="hasPets" value ="cats" />Cat(s) <br>
+				<input type="checkbox" name="hasPets" value ="dogs" />Dog(s) <br>
+				<input type="checkbox" name="hasPets" value ="other" />Specify: 
+				<input type="text" name="otherPets" id="otherPets" /> <br>
+				<input type="checkbox" name="hasPets" value ="none" />No Pets <br>
+
+			</fieldset>
+
+			<fieldset>
+					<legend>What are you looking for?</legend>
+
+					<ul>
+						<li>Size of apartment:<br>
+							<input type="checkbox" name="aptSize" value ="Studio" />Studio
+							<input type="checkbox" name="aptSize" value ="threeAndAHalf" />3&frac12;
+							<input type="checkbox" name="aptSize" value ="fourAndAHalf" />4&frac12;: 
+							<input type="checkbox" name="aptSize" value="fiveAndAHalf" /> 5&frac12;
+							<input type="checkbox" name="aptSize" value ="moreThanFive" />More than 5&frac12;
+							<br><br>
+						</li>
+						
+						<li>Do you have preferred locations?<br>
+						<input type="checkbox" name="preferredLocation" value ="WestIsland" />West Island
+							<input type="checkbox" name="preferredLocation" value ="Downtown" />Downtown
+							<input type="checkbox" name="preferredLocation" value ="LowerWestmount" />Lower Westmount
+							<input type="checkbox" name="preferredLocation" value="NDG" /> NDG
+							<input type="checkbox" name="preferredLocation" value ="EastEnd" />East End of Island
+							<input type="checkbox" name="preferredLocation" value ="DontCare" />Don't care
+							<br><br>
+						</li>
+
+						<li>Price Range/month:<br>
+							<select name="priceRange">
+								<option value = "underFive"> &lt;$500 </option>
+								<option value = "fiveToSeven"> $500-$700 </option> 
+								<option value = "sevenTo1K">  $700-$1000 </option>
+								<option value = "noPriceLimit"> No Price Limit </option>
+							</select>
+							<br><br>
+						</li>
+
+						<li>Would be nice to have <br>
+							<input type="checkbox" name="niceToHave" value ="firePlace" />Fire place
+							<input type="checkbox" name="niceToHave" value ="laundromat" />Laundromat in building
+							<input type="checkbox" name="niceToHave" value ="indoorParking" />Indoor Parking
+							<input type="checkbox" name="niceToHave" value="outputParking" />Output Parking
+							<input type="checkbox" name="niceToHave" value ="balcony" />Balcony
+							<br><br>
+						</li>
+					</ul>
+			</fieldset>
+
+			Let's see what we can find ... <br>
+
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Reset" />
+
+						
+		</form>
+	</body>
+</html>
