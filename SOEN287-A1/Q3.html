@@ -4,32 +4,33 @@
 		<meta charset="UTF-8">
 		<title>Rental Form</title>
 	</head>
-	
-	<body>
-	<h1>Chris' Apartment Search Form</h1>
 
-		<form action = "POST">
+	<body>
+
+	<h1>
+		Chris' Apartment Search Form
+	</h1>
+
+		<form action = "Q4.html">
 			<fieldset>
 			<legend>Renter(s) information</legend>
-				How many people will live in the apartment?
-				<input type = "number" name="howManyPeople" id="howManyPeople" min="0" max="5"/>
+				<p>How many people will live in the apartment?
+					<input type = "number" name="howManyPeople" id="howManyPeople" min="0" max="5"/>
+				</p>
 
-				<br><br>
+				<p>Smoker? &nbsp;
+					<input type="radio" name="isSmoker" id="yes" /><label for="yes">Yes</label>
+					<input type="radio" name="isSmoker" id="no" /><label for="no">No</label>
+				</p>
 
-				<label>Smoker? &nbsp;</label>
-				<input type="radio" name="isSmoker" value="yes" />Yes
-				<input type="radio" name="isSmoker" value="no" />No
-				
-				<br><br>
+				<p>Any pets?<br>
 
-				<label>Any pets? </label> 
-				<br>
-
-				<input type="checkbox" name="hasPets" value ="cats" />Cat(s) <br>
-				<input type="checkbox" name="hasPets" value ="dogs" />Dog(s) <br>
-				<input type="checkbox" name="hasPets" value ="other" />Specify: 
-				<input type="text" name="otherPets" id="otherPets" /> <br>
-				<input type="checkbox" name="hasPets" value ="none" />No Pets <br>
+					<input type="checkbox" name="hasPets" id="cats" /><label for="cats">Cat(s)</label> <br>
+					<input type="checkbox" name="hasPets" id="dogs" /><label for="dogs">Dog(s)</label> <br>
+					<input type="checkbox" name="hasPets" id="other" /><label for="other">Specify:</label>
+					<input type="text" name="otherPets" id="otherPets" /> <br>
+					<input type="checkbox" name="hasPets" id ="none" /><label for="none">No Pets</label><br>
+				</p>
 
 			</fieldset>
 
@@ -37,52 +38,60 @@
 					<legend>What are you looking for?</legend>
 
 					<ul>
-						<li>Size of apartment:<br>
-							<input type="checkbox" name="aptSize" value ="Studio" />Studio
-							<input type="checkbox" name="aptSize" value ="threeAndAHalf" />3&frac12;
-							<input type="checkbox" name="aptSize" value ="fourAndAHalf" />4&frac12;: 
-							<input type="checkbox" name="aptSize" value="fiveAndAHalf" /> 5&frac12;
-							<input type="checkbox" name="aptSize" value ="moreThanFive" />More than 5&frac12;
-							<br><br>
-						</li>
-						
-						<li>Do you have preferred locations?<br>
-						<input type="checkbox" name="preferredLocation" value ="WestIsland" />West Island
-							<input type="checkbox" name="preferredLocation" value ="Downtown" />Downtown
-							<input type="checkbox" name="preferredLocation" value ="LowerWestmount" />Lower Westmount
-							<input type="checkbox" name="preferredLocation" value="NDG" /> NDG
-							<input type="checkbox" name="preferredLocation" value ="EastEnd" />East End of Island
-							<input type="checkbox" name="preferredLocation" value ="DontCare" />Don't care
-							<br><br>
+						<li>
+							<p>
+								Size of apartment:<br>
+								<input type="checkbox" name="aptSize" id ="Studio" /><label for="Studio">Studio</label>
+								<input type="checkbox" name="aptSize" id ="threeAndAHalf" /><label for="threeAndAHalf">3&frac12;</label>
+								<input type="checkbox" name="aptSize" id ="fourAndAHalf" /><label for="fourAndAHalf">4&frac12;</label>
+								<input type="checkbox" name="aptSize" id="fiveAndAHalf" /><label for="fiveAndAHalf">5&frac12;</label>
+								<input type="checkbox" name="aptSize" id ="moreThanFive" /><label for="moreThanFive">More than 5&frac12;</label>
+							</p>
 						</li>
 
-						<li>Price Range/month:<br>
-							<select name="priceRange">
-								<option value = "underFive"> &lt;$500 </option>
-								<option value = "fiveToSeven"> $500-$700 </option> 
-								<option value = "sevenTo1K">  $700-$1000 </option>
-								<option value = "noPriceLimit"> No Price Limit </option>
-							</select>
-							<br><br>
+						<li>
+							<p>
+								Do you have preferred locations?<br>
+								<input type="checkbox" name="preferredLocation" id ="WestIsland" /><label for="WestIsland">West Island</label>
+								<input type="checkbox" name="preferredLocation" id ="Downtown" /><label for="Downtown">Downtown</label>
+								<input type="checkbox" name="preferredLocation" id ="LowerWestmount" /><label for="LowerWestmount">Lower Westmount</label>
+								<input type="checkbox" name="preferredLocation" id="NDG" /><label for="NDG">NDG</label>
+								<input type="checkbox" name="preferredLocation" id ="EastEnd" /><label for="EastEnd">East End of Island</label>
+								<input type="checkbox" name="preferredLocation" id ="DontCare" /><label for="DontCare">Don't care</label>
+							</p>
 						</li>
 
-						<li>Would be nice to have <br>
-							<input type="checkbox" name="niceToHave" value ="firePlace" />Fire place
-							<input type="checkbox" name="niceToHave" value ="laundromat" />Laundromat in building
-							<input type="checkbox" name="niceToHave" value ="indoorParking" />Indoor Parking
-							<input type="checkbox" name="niceToHave" value="outputParking" />Output Parking
-							<input type="checkbox" name="niceToHave" value ="balcony" />Balcony
-							<br><br>
+						<li>
+							<p>
+								Price Range/month:<br>
+								<select name="priceRange">
+									<option id = "underFive"> &lt;$500 </option>
+									<option id = "fiveToSeven"> $500-$700 </option>
+									<option id = "sevenTo1K">  $700-$1000 </option>
+									<option id = "noPriceLimit"> No Price Limit </option>
+								</select>
+							</p>
+						</li>
+
+						<li>
+							<p>
+								Would be nice to have <br>
+								<input type="checkbox" name="niceToHave" id ="firePlace" /><label for="firePlace">Fire place</label>
+								<input type="checkbox" name="niceToHave" id ="laundromat" /><label for="laundromat">Laundromat in building</label>
+								<input type="checkbox" name="niceToHave" id ="indoorParking" /><label for="indoorParking">Indoor Parking</label>
+								<input type="checkbox" name="niceToHave" id="outputParking" /><label for="outputParking">Output Parking</label>
+								<input type="checkbox" name="niceToHave" id ="balcony" /><label for="balcony">Balcony</label>
+							</p>
 						</li>
 					</ul>
 			</fieldset>
 
 			Let's see what we can find ... <br>
 
-			<input type="submit" value="Submit" />
-			<input type="reset" value="Reset" />
+			<input type="submit" value="Search" />
+			<input type="reset" value="Start over" />
 
-						
+
 		</form>
 	</body>
 </html>
