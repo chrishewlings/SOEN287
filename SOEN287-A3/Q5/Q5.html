@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+	<html lang = "en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Rental Form</title>
+		<style type="text/css">
+			body {background-color: powderblue;}
+			#fieldset01 {background-color: lightpink; border-color: darkblue;}
+			#fieldset02 {background-color: violet; border-color: darkgreen;}
+			#legend01 { color: blue; }
+			#legend02 { color: darkgreen; }
+			#fieldset01 .question {color: blue;}
+			#fieldset02 .question {color: green;}
+			.question {font-weight: bold;}
+			label {font-weight: normal;}
+
+			#expertSuggestions { visibility: hidden; }
+			#expertField { background-color: pink; color: blue; border-color: blue;}
+		</style>
+		<script src="Q5.js"></script>
+	</head>
+
+	<body>
+
+	<h1>
+		<a href="./images/for-rent.svg">
+			<img src="./images/for-rent.svg" alt="For Rent" width="50" height="50">
+		</a>
+		Chris' Apartment Search Form
+	</h1>
+
+		<form action = "Q4.html">
+			<fieldset id="fieldset01">
+			<legend id="legend01">Renter(s) information</legend>
+				<p class="question">How many people will live in the apartment?
+					<input type = "number" name="howManyPeople" id="howManyPeople" min="0" max="5"/>
+				</p>
+
+				<p class="question">Smoker? &nbsp;
+					<input type="radio" name="isSmoker" id="yes" /><label for="yes">Yes</label>
+					<input type="radio" name="isSmoker" id="no" /><label for="no">No</label>
+				</p>
+
+				<p class="question">Any pets?<br>
+
+					<input type="checkbox" name="hasPets" id="cats" /><label for="cats">Cat(s)</label> <br>
+					<input type="checkbox" name="hasPets" id="dogs" /><label for="dogs">Dog(s)</label> <br>
+					<input type="checkbox" name="hasPets" id="other" /><label for="other">Specify:</label>
+					<input type="text" name="otherPets" id="otherPets" /> <br>
+					<input type="checkbox" name="hasPets" id ="none" /><label for="none">No Pets</label><br>
+				</p>
+
+			</fieldset>
+
+			<fieldset id="fieldset02">
+					<legend id="legend02">What are you looking for?</legend>
+					<ul>
+						<li>
+							<p class="question">
+								Size of apartment:<br>
+								<input type="checkbox" name="aptSize" id ="Studio" /><label for="Studio">Studio</label>
+								<input type="checkbox" name="aptSize" id ="threeAndAHalf" /><label for="threeAndAHalf">3&frac12;</label>
+								<input type="checkbox" name="aptSize" id ="fourAndAHalf" /><label for="fourAndAHalf">4&frac12;</label>
+								<input type="checkbox" name="aptSize" id="fiveAndAHalf" /><label for="fiveAndAHalf">5&frac12;</label>
+								<input type="checkbox" name="aptSize" id ="moreThanFive" /><label for="moreThanFive">More than 5&frac12;</label>
+							</p>
+						</li>
+
+						<li>
+							<p class="question">
+								Do you have preferred locations?<br>
+								<input type="checkbox" name="preferredLocation" id ="WestIsland" /><label for="WestIsland">West Island</label>
+								<input type="checkbox" name="preferredLocation" id ="Downtown" /><label for="Downtown">Downtown</label>
+								<input type="checkbox" name="preferredLocation" id ="LowerWestmount" /><label for="LowerWestmount">Lower Westmount</label>
+								<input type="checkbox" name="preferredLocation" id="NDG" /><label for="NDG">NDG</label>
+								<input type="checkbox" name="preferredLocation" id ="EastEnd" /><label for="EastEnd">East End of Island</label>
+								<input type="checkbox" name="preferredLocation" id ="DontCare" /><label for="DontCare">Don't care</label>
+							</p>
+						</li>
+
+						<li>
+							<p class="question">
+								Price Range/month:<br>
+								<select name="priceRange">
+									<option id = "underFive"> &lt;$500 </option>
+									<option id = "fiveToSeven"> $500-$700 </option>
+									<option id = "sevenTo1K">  $700-$1000 </option>
+									<option id = "noPriceLimit"> No Price Limit </option>
+								</select>
+							</p>
+						</li>
+
+						<li>
+							<p class="question">
+								Would be nice to have <br>
+								<input type="checkbox" name="niceToHave" id ="firePlace" /><label for="firePlace">Fire place</label>
+								<input type="checkbox" name="niceToHave" id ="laundromat" /><label for="laundromat">Laundromat in building</label>
+								<input type="checkbox" name="niceToHave" id ="indoorParking" /><label for="indoorParking">Indoor Parking</label>
+								<input type="checkbox" name="niceToHave" id="outputParking" /><label for="outputParking">Output Parking</label>
+								<input type="checkbox" name="niceToHave" id ="balcony" /><label for="balcony">Balcony</label>
+							</p>
+						</li>
+					</ul>
+			</fieldset>
+
+			Let's see what we can find ... <br>
+
+			<input type="submit" id="submit" value="Search" />
+			<input type="reset" id="reset" value="Start over" />
+
+
+		</form>
+		<div id="expertSuggestions">
+			<fieldset id="expertField">
+				<legend>Expert Suggestions</legend>
+			</fieldset>
+		</div>
+	</body>
+</html>

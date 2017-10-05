@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Name : Chris Hewlings
+Student no: 29145958
+Course/Section : SOEN 287-S
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 4 - Name pattern matching</title>
+  <script>
+    function NBnamepattern() {
+      pattern = 'y$|ie$';
+      var i = 0;
+
+      for( var arg in arguments[0]) {
+        toMatch = arguments[0][arg];
+        if( toMatch.match(pattern) != null ){
+          i++;
+        }
+      }
+      return i;
+    }
+  </script>
+</head>
+
+
+<body>
+
+  <script>
+    var names = new Array("freddie","bob","mieke","yahoo2","georgey");
+    var numInstances = NBnamepattern(names);
+
+    p1 = document.createElement('p');
+    p1text = document.createTextNode("The number of names having these two patterns (/ie$/* and (/y$/) in the array is : " + numInstances);
+    p1.appendChild(p1text);
+
+
+    document.body.appendChild(p1);
+  </script>
+</body>
+
+</html>

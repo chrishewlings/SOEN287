@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+Name : Chris Hewlings
+Student no: 29145958
+Course/Section : SOEN 287-S
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 3 - Squares and Cubes</title>
+  <script>
+
+    function writeTable()
+    {
+      // create table
+      myTable = document.createElement('table');
+      myTable.setAttribute('border', '1');
+      myTable.setAttribute('width', '50%');
+
+      // get div from body to nest table in
+      parentDiv = document.getElementById('tableDiv');
+
+      // header row
+
+      firstRow = myTable.insertRow(0);
+      var numberHeader = firstRow.insertCell(0);
+      var squaresHeader = firstRow.insertCell(1);
+      var cubesHeader = firstRow.insertCell(2);
+      numberHeader.innerHTML = "<b>number</b>";
+      squaresHeader.innerHTML = "<b>squares</b>";
+      cubesHeader.innerHTML = "<b>cubes</b>";
+
+
+      // creating table body
+
+      rows = new Array();
+
+      for(i = 1; i < 7; i++){
+        rows[i] = myTable.insertRow(i);
+        for(j=0; j < 3; j++){
+          rows[i].insertCell(j);
+        }
+      }
+
+      // filling table cells
+
+      for(var row in rows){
+          num = (row - 1);
+          rows[row].childNodes[0].innerHTML = num;
+          rows[row].childNodes[1].innerHTML = num * num;
+          rows[row].childNodes[2].innerHTML = num * num * num;
+      }
+
+      // finally, write to the selected div
+
+      parentDiv.appendChild(myTable);
+    }
+
+  </script>
+
+</head>
+<body onload="writeTable()">
+  <div id="tableDiv"></div>
+</body>
+</html>

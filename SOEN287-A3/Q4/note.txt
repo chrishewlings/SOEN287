@@ -1,0 +1,1 @@
+The provided XHTML for Question 4 did not validate properly, so I corrected its errors/warnings and the resulting XHTML is in Q4_corrected.html

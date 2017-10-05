@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Name : Chris Hewlings
+Student no: 29145958
+Course/Section : SOEN 287-S
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+
+  var entryArray = [];
+
+  var positiveCounter = 0;
+  var zeroCounter = 0;
+  var negativeCounter = 0;
+
+  entryArray.firstInt = prompt("Enter first integer:");
+  entryArray.SecondInt = prompt("Enter second integer:");
+  entryArray.thirdInt = prompt("Enter third integer:");
+  entryArray.fourthInt = prompt("Enter fourth integer:");
+
+  for(var entry in entryArray)
+  {
+    if(entryArray[entry].match("^0$"))
+    {
+      zeroCounter++;
+    } else if (entryArray[entry].match("^[1-9]")) {
+      positiveCounter++;
+    } else if (entryArray[entry].match("^-")) {
+      negativeCounter++;
+    }
+  }
+
+  function displayOutput()
+  {
+    header = document.createElement('h1');
+    headerText = document.createTextNode("Welcome to Counter System");
+    header.appendChild(headerText);
+
+    p1 = document.createElement('p');
+    p1text = document.createTextNode("The number of zero numbers entered is " + zeroCounter);
+    p1.appendChild(p1text);
+
+    p2 = document.createElement('p');
+    p2text = document.createTextNode("The number of positive numbers entered is " + positiveCounter);
+    p2.appendChild(p2text);
+
+    p3 = document.createElement('p');
+    p3text = document.createTextNode("The number of negative numbers entered is " + negativeCounter);
+    p3.appendChild(p3text);
+
+
+
+    document.body.appendChild(header);
+    document.body.appendChild(p1);
+    document.body.appendChild(p2);
+    document.body.appendChild(p3);
+  }
+
+  </script>
+  <title>Question 2 - Counter System</title>
+</head>
+<body onload="displayOutput()">
+</body>
+</html>
